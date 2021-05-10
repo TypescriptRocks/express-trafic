@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "target": "es3",
+        "watch": true,
+        "lib": ["dom", "es2017"],
+        "resolveJsonModule": true
+    },
+    "include": ["./src"]
+}

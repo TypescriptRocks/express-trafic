@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    font-size: 16px;
+    display: grid;
+    grid-template-columns: minmax(256px, 20%) 1fr;
+}
+body, input, button {
+    font-family: Helvetica, Arial, sans-serif;
+}
+.n {
+    box-shadow: 0 0 4px #808080;
+}
+.n-head {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+.n-title {
+    font-size: 1.5rem;
+}
+.n-config {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #5a5a5a;
+    transition: 75ms;
+}
+.n-config:hover, .n-config:focus {
+    color: #000000;
+}
+.n-pages {
+    padding: 8px;
+    display: grid;
+}
+.n-page {
+    margin: 2px;
+    padding: 12px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #5a5a5a;
+    border-radius: 4px;
+    transition: 75ms;
+}
+.n-page:hover, .n-page:focus {
+    background: #f2f2f2;
+    color: #000000;
+}
+.n-page.active {
+    color: #3498db;
+    background: #e9f4fb;
+}
+.n-page-icon {
+    margin-right: 8px;
+}
+
+.m {
+    height: 100vh;
+}
