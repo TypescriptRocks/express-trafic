@@ -4,7 +4,7 @@
   "description": "A middleware for express that allows for analysing trafic.",
   "main": "src/backend/index.js",
   "scripts": {
-    "test": "nodemon .",
+    "test": "node test/test.js",
     "build": "tsc"
   },
   "repository": {
@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/Neton6000/express-trafic#readme",
   "dependencies": {
+    "@types/os-utils": "^0.0.1",
+    "chalk": "^4.1.1",
     "express": "^4.17.1",
+    "os-utils": "^0.0.14",
     "ws": "^7.4.5"
   },
   "devDependencies": {

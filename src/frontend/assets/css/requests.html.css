@@ -1,0 +1,76 @@
+
+.content {
+    height: 100%;
+    overflow: hidden visible;
+}
+.requests-title {
+    padding: 16px 32px;
+    border-bottom: 1px solid #c7c7c7;
+}
+.request-filter {
+    padding: 16px;
+}
+.requests {
+    height: calc(100vh - 60px - 1px - 50px);
+    border-top: 1px solid #c7c7c7;
+    overflow-y: auto;
+}
+.requests-message {
+    margin: 32px;
+    display: block;
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-align: center;
+    color: #bfbfbf;
+}
+.requests-message.error {
+    color: #f1978e;
+}
+.request {
+    padding: 4px 96px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #c7c7c7;
+}
+.request > * {
+    margin: 4px;
+}
+.request-time {
+    width: 96px;
+    position: absolute;
+    transform: translateX(-100%);
+    text-align: center;
+    color: #a1a1a1;
+}
+.request-status {
+    padding: 6px;
+    color: #ffffff;
+    background: #bfbfbf;
+    border-radius: 4px;
+}
+.status-1xx { background: #93c8ec; }
+.status-2xx { background: #97e7b9; }
+.status-3xx { background: #f8e187; }
+.status-4xx { background: #caa6d8; }
+.status-5xx { background: #f1978e; }
+.request-path {
+    color: #424242;
+}
+.request-restime, .request-ip {
+    color: #a1a1a1;
+}
+.request-approve {
+    padding: 6px;
+    font-size: 1rem;
+    color: #3498db;
+    background: transparent;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 75ms;
+}
+.request-approve:hover, .request-approve:focus {
+    color: #2980b9;
+    background: #e9f4fb;
+}

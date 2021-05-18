@@ -1,11 +1,27 @@
 
-import { Express } from "express";
+export interface MiddlewareConfigOptions {
+    approveMode?: boolean,
+    requestTimeout?: number
+}
+
+interface dashboardAuth {
+    hashAlgorithm?: "plain" | "sha1" | "sha256" | "sha512",
+    username: string,
+    password: string
+}
 
 export interface MiddlewareOptions {
-    server?: Express
     path?: string,
     port?: number,
-    defualtConfig?: {
-        approveMode?: boolean
-    }
+    defaultConfig?: MiddlewareConfigOptions,
+    dashboardAuth?: dashboardAuth
+}
+
+export interface statusPayload {
+    cpuUsage?: number,
+    memoryUsage?: number
+}
+
+export interface wssSubscriptions {
+    status?: any[]
 }

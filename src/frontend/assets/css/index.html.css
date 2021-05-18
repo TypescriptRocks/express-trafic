@@ -3,3 +3,7 @@
     height: 100%;
     overflow: hidden visible;
 }
+.overview-title {
+    padding: 16px 32px;
+    border-bottom: 1px solid #c7c7c7;
+}

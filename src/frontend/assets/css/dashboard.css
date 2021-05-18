@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -8,11 +9,14 @@ body {
     font-size: 16px;
     display: grid;
     grid-template-columns: minmax(256px, 20%) 1fr;
+    overflow: none;
 }
 body, input, button {
     font-family: Helvetica, Arial, sans-serif;
 }
 .n {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
     box-shadow: 0 0 4px #808080;
 }
 .n-head {
@@ -27,23 +31,30 @@ body, input, button {
     font-size: 1.5rem;
     text-decoration: none;
     color: #5a5a5a;
-    transition: 75ms;
+    transition: 240ms;
+    outline: 0;
 }
-.n-config:hover, .n-config:focus {
+.n-config.active {
+    color: #3498db;
+}
+.n-config:not(.active):hover, .n-config:not(.active):focus {
     color: #000000;
+    transform: rotate(60deg);
 }
 .n-pages {
     padding: 8px;
     display: grid;
+    grid-auto-rows: max-content;
 }
 .n-page {
     margin: 2px;
-    padding: 12px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
     font-size: 1rem;
     text-decoration: none;
     color: #5a5a5a;
     border-radius: 4px;
-    transition: 75ms;
 }
 .n-page:hover, .n-page:focus {
     background: #f2f2f2;
@@ -53,8 +64,54 @@ body, input, button {
     color: #3498db;
     background: #e9f4fb;
 }
+.n-page-icon, .n-page-title {
+    margin: 6px;
+}
 .n-page-icon {
-    margin-right: 8px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+}
+.n-page-notif {
+    padding: 6px;
+    color: #ffffff;
+    background: #f1978e;
+    border-radius: 4px;
+}
+.n-foot-frame {
+    padding: 4px;
+    display: grid;
+    transform: translateX(-100%);
+    transition: 250ms;
+}
+.n-foot-frame.active {
+    transform: translateX(0);
+}
+.n-foot-link {
+    margin: 6px;
+    color: #808080;
+}
+.n-foot-licenselink {
+    color: #808080;
+}
+.n-foot-link:hover, .n-foot-link:focus, .n-foot-licenselink:hover, .n-foot-licenselink:focus {
+    color: #5a5a5a;
+}
+.n-foot-license {
+    margin: 6px;
+    color: #808080;
+}
+.n-foot-info {
+    padding: 8px;
+    color: #aaaaaa;
+    font-size: 1.25rem;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    transition: 75ms;
+}
+.n-foot-info:hover, .n-foot-info:focus {
+    color: #808080;
 }
 
 .m {

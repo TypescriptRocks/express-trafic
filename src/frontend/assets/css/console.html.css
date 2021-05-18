@@ -1,0 +1,63 @@
+
+.content {
+    height: 100%;
+    overflow: hidden visible;
+}
+.console-title {
+    padding: 16px 32px;
+    border-bottom: 1px solid #c7c7c7;
+}
+.console {
+    margin: 32px;
+    display: grid;
+    grid-template-rows: 1fr 40px;
+    background: #1e1e1e;
+    border-radius: 4px;
+}
+.output {
+    padding: 8px 112px;
+    height: calc(100vh - 60px - 1px - 64px - 40px);
+    display: grid;
+    grid-auto-rows: max-content;
+    color: #bcbcbc;
+    overflow-y: scroll;
+}
+.outmsg {
+    margin: 2px;
+    font-family: "Source Code Pro", monospace;
+    position: relative;
+}
+.outmsg::before {
+    content: attr(data-time);
+    width: 112px;
+    position: absolute;
+    transform: translateX(-100%);
+    text-align: center;
+    color: #787878;
+}
+.input {
+    display: flex;
+    font-family: "Source Code Pro", monospace;
+    color: #ffffff;
+    background: #262626;
+    border-radius: 0 0 4px 4px;
+}
+.input-label {
+    padding: 6px 0 6px 16px;
+    line-height: 28px;
+    color: #dbdbdb;
+}
+.input-cmd {
+    padding: 6px 16px;
+    font-size: 1rem;
+    width: 100%;
+    font-family: "Source Code Pro", monospace;
+    line-height: 28px;
+    color: #ffffff;
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+.input-cmd::placeholder {
+    color: #dbdbdb;
+}

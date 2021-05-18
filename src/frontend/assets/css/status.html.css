@@ -1,0 +1,27 @@
+
+.content {
+    height: 100%;
+    overflow: hidden visible;
+}
+.status-title {
+    padding: 16px 32px;
+    border-bottom: 1px solid #c7c7c7;
+}
+.monitors {
+    display: grid;
+}
+.monitor {
+    padding: 16px;
+    display: grid;
+}
+.monitor-label {
+    margin: 6px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #808080;
+}
+.monitor-value {
+    margin: 6px;
+    font-size: 2.75rem;
+    color: #424242;
+}
